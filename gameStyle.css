@@ -20,15 +20,9 @@ h1{
 
 li, ul h1{
   display: inline;
-  margin-right: 30px;
 }
-
-li.games, li.title{
-  margin-right: 50px;
-}
-
-li.title{
-  color: darkred;
+.title{
+  font-size: 50px
 }
 
 #content{

@@ -1,0 +1,83 @@
+*{
+  font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+}
+
+header{
+  background-color: darkgrey;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding: 3px 0px 1px 0px;
+}
+
+#nav{
+  font-size: 20px;
+}
+
+h1{
+  font-size: 50px;
+}
+
+li, ul h1{
+  display: inline;
+  margin-right: 30px;
+}
+
+li.games, li.title{
+  margin-right: 50px;
+}
+
+li.title{
+  color: darkred;
+}
+
+#content{
+  background-color: #efefef;
+  border-radius: 15px;
+}
+
+.home:hover, .games:hover, .about:hover, .contact:hover{
+  font-size: 40px;
+}
+
+#score{
+  font-size: 50px;
+  color:darkred;
+}
+
+#heads-face{
+  font-size: 20px;
+  width: 100px;
+  height: 50px;
+  border-radius: 6px;
+}
+
+#heads-face:hover {
+  background-color: black;
+  color: white;
+}
+
+#tails-face{
+  font-size: 20px;
+  width: 100px;
+  height: 50px;
+  border-radius: 6px;
+}
+
+#tails-face:hover {
+  background-color: black;
+  color: white;
+}
+
+#reset{
+  border-radius: 5px;
+}
+
+#reset:hover{
+  background-color: black;
+  color: white;
+}
+
+.spacer{
+  visibility: hidden;
+}

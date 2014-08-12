@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Coin Toss!</title>
+        <!--Normalize.CSS file-->
+        <link rel="stylesheet" type="text/css" href="normalize.css">
+        <!--New styling file-->
+        <link rel="stylesheet" type="text/css" href="gameStyle.css">
+        <!--Skeleton Style-->
+        <link rel="stylesheet" type="text/css" href="skeleton.css">
+        <link rel="shortcut icon" href="http://www.marshu.com/articles/images-website/articles/presidents-on-coins/quarter-coin-head.jpg" />
+    </head>
+
+    <body itemscope itemtype="http://schema.org/WebPage" background="http://www.martinprint.com.au/blog/wp-content/uploads/2013/02/TossingCoin.png">
+        <div class="container">
+            <header class="sixteen columns">
+                <ul id="nav"><strong>
+                    <li class="home">Home</li>
+                    <li class="games">Games</li>
+                    <h1 class="title">COIN TOSS</h1>
+                    <li class="about">About</li>
+                    <li class="contact">Contact</li>
+                </ul></strong>
+            </header>
+            <div class='four columns'>&nbsp;</div>
+            <div id="content" class="eight columns">
+                <p id="info">Welcome to the Original Coin Toss Game :D<br>Can you reach a score of 10?</p>
+                <h3 id="choice">Heads or Tails?</h3>
+            </div>
+            <div class='four columns'>&nbsp;</div>
+            <div class='clear'></div>
+            <div class='seven columns'>&nbsp;</div>
+            <div class='two columns'>Score: <div id="score"></div></div>
+            <div class='clear'></div>
+
+            <div class='five columns'>&nbsp;</div>
+            <div class='three columns'><button id="heads-face" onclick="pickHeads();"/>Heads</button></div>
+            <div class='three columns'><button id="tails-face" class='three columns' onclick="pickTails();"/>Tails</button></div>
+            <h3 id="results"></h3>
+            <div id="coinPicture"></div>
+            <img id="headsORtails" height="100px" width="100px">
+            <button id="reset" onclick="reset();"/>Reset</button>
+            </div>
+        </div>
+    </body>
+
+    <script>
+    var score = 0;
+    var picture = document.getElementById("coinPicture");
+    var output = document.getElementById("results");
+    var counting = document.getElementById("score");
+    document.getElementById("headsORtails").src = "http://www.marshu.com/articles/images-website/articles/presidents-on-coins/quarter-coin-head.jpg"
+
+    counting.textContent = 0;
+
+    var reset = function(){
+        counting.textContent = 0;
+        score = 0;
+    };
+
+    var pickHeads = function(){
+        if (Math.random() < 0.5) {
+            output.textContent = "HEADS! You Win! +1 point";
+            score = score + 1;
+            counting.textContent = score;
+            document.getElementById("headsORtails").src = "http://www.marshu.com/articles/images-website/articles/presidents-on-coins/quarter-coin-head.jpg";
+        } else {
+            output.textContent = "TAILS! You Lose! -1 point";
+            document.getElementById("headsORtails").src = "http://www.marshu.com/articles/images-website/articles/presidents-on-coins/quarter-coin-tail.jpg";
+            score = score - 1;
+            counting.textContent = score;
+        }
+
+        if (score >= 10){
+            output.textContent = "YOU DID IT! LUCKY BASTARD!";
+        }
+        if (score <= -10){
+            output.textContent = "YOU LOST! GO HOME!"
+            counting.textContent = 0;
+            score = 0;
+        }
+    };
+
+    var pickTails = function(){
+        if (Math.random() < 0.5) {
+            output.textContent = "TAILS! You Win! +1 point";
+            score = score + 1;
+            counting.textContent = score;
+            document.getElementById("headsORtails").src = "http://www.marshu.com/articles/images-website/articles/presidents-on-coins/quarter-coin-tail.jpg";
+        } else {
+            output.textContent = "HEADS! You Lose! -1 point";
+            document.getElementById("headsORtails").src = "http://www.marshu.com/articles/images-website/articles/presidents-on-coins/quarter-coin-head.jpg";
+            score = score - 1;
+            counting.textContent = score;
+        }
+
+        if (score >= 10){
+            output.textContent = "YOU DID IT! LUCKY BASTARD!";
+        }
+        if (score <= -10){
+            output.textContent = "YOU LOST! GO HOME!"
+            counting.textContent = 0;
+            score = 0;
+        }
+    };
+    </script>
+</html>

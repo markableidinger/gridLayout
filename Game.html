@@ -14,13 +14,13 @@
     <body itemscope itemtype="http://schema.org/WebPage" background="http://www.martinprint.com.au/blog/wp-content/uploads/2013/02/TossingCoin.png">
         <div class="container">
             <header class="sixteen columns">
-                <ul id="nav"><strong>
+                <ul id="nav">
                     <li class="home">Home</li>
                     <li class="games">Games</li>
                     <h1 class="title">COIN TOSS</h1>
                     <li class="about">About</li>
                     <li class="contact">Contact</li>
-                </ul></strong>
+                </ul>
             </header>
             <div class='four columns'>&nbsp;</div>
             <div id="content" class="eight columns">
@@ -32,14 +32,20 @@
             <div class='seven columns'>&nbsp;</div>
             <div class='two columns'>Score: <div id="score"></div></div>
             <div class='clear'></div>
-
             <div class='five columns'>&nbsp;</div>
             <div class='three columns'><button id="heads-face" onclick="pickHeads();"/>Heads</button></div>
-            <div class='three columns'><button id="tails-face" class='three columns' onclick="pickTails();"/>Tails</button></div>
-            <h3 id="results"></h3>
-            <div id="coinPicture"></div>
-            <img id="headsORtails" height="100px" width="100px">
-            <button id="reset" onclick="reset();"/>Reset</button>
+            <div class='three columns'><button id="tails-face" onclick="pickTails();"/>Tails</button></div>
+            <div class='clear'></div>
+            <div class='five columns'>&nbsp;</div>
+            <h3 id="results" class='six columns'>&nbsp;</h3>
+            <div class='clear'></div>
+            <div class='six columns'>&nbsp;</div>
+            <div id="coinPicture" class='four columns'>
+                <img id="headsORtails" height="100px" width="100px">
+            </div>
+            <div class='clear'></div>
+            <div class='seven columns'>&nbsp;</div>
+            <button id="reset" class='two columns' onclick="reset();"/>Reset</button>
             </div>
         </div>
     </body>

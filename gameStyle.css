@@ -4,10 +4,11 @@
 }
 
 header{
-  background-color: darkgrey;
+  background-color: #686868;
   margin-top: 0px;
   margin-bottom: 10px;
   padding: 3px 0px 1px 0px;
+  color: white;
 }
 
 #nav{
